@@ -1,0 +1,37 @@
+.book {
+  background: linear-gradient(
+      90deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 70%,
+      transparent 50%
+    ),
+    url("../img/nat-10.jpg") no-repeat center/cover;
+  min-height: 31.25rem;
+  border-radius: 3px;
+  box-shadow: 0 15px 40px rgba($color-black, 0.2);
+  transition: all 0.2s;
+
+  @media screen and (min-width: 375px) {
+    & {
+      background: linear-gradient(
+          105deg,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 60%,
+          transparent 50%
+        ),
+        url("../img/nat-10.jpg") no-repeat center/cover;
+    }
+  }
+
+  @media screen and (min-width: 690px) {
+    & {
+      background: linear-gradient(
+          105deg,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 50%,
+          transparent 50%
+        ),
+        url("../img/nat-10.jpg") no-repeat center/cover;
+    }
+  }
+}

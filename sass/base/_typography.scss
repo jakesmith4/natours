@@ -1,0 +1,83 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 1rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* margin-bottom: 60px; */
+  margin-bottom: 1.8rem;
+
+  &--main {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 0.6rem;
+    /* animation-name: moveInLeft; */
+    /* animation-duration: 3s; */
+    /* animation-timing-function: ease-in-out; */
+    animation: moveInLeft 1.6s ease-in-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.1rem;
+    animation: moveInRight 1.6s ease-in-out;
+  }
+
+  @media screen and (min-width: 500px) {
+    &--main {
+      font-size: 3.75rem;
+      letter-spacing: 1rem;
+    }
+    &--sub {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media screen and (min-width: 675px) {
+    &--main {
+      font-size: 3.75rem;
+      letter-spacing: 2.2rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  // Linear Gradient Background
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  @include linearGradientBackground;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 5px 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
